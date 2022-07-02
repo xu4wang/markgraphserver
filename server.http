@@ -1,5 +1,6 @@
 ###
 GET http://localhost:3000/
+API-KEY: secret
 
 ###
 GET http://localhost:3000/keys

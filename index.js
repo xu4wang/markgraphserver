@@ -7,6 +7,16 @@ const db = {};
 
 app.use(express.json());
 
+// PROTECT ALL ROUTES THAT FOLLOW
+app.use((req, res, next) => {
+  const apiKey = req.get('API-Key')
+  if (!apiKey || apiKey !== process.env.API_KEY) {
+    res.status(401).json({error: 'unauthorised'})
+  } else {
+    next()
+  }
+})
+
 app.get('/store/:key', (req, res) => {
   res.json({ data: db[req.params.key] });
 });

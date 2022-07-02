@@ -1,0 +1,32 @@
+###
+GET http://localhost:3000/
+
+###
+GET http://localhost:3000/keys
+
+
+###
+GET http://localhost:3000/dbinfo
+
+
+### 
+POST http://localhost:3000/store/hello
+Content-Type: application/json
+
+{ 
+    "amount": 100,
+    "merchant_order_id": "austin_test_01",
+    "note": "some note for this order",
+    "redirect_url": "http://www.baidu.com",
+    "redirect_url_fail": "http://www.baidu.com",
+    "signature": "49083F9F27D1593A34D4BC1D5338ECFEE49F49663ED129D77D3CB3ECBAA962E3",
+    "timestamp": "1621354265"
+}
+
+
+###
+
+get http://localhost:3000/store/hello
+
+###
+delete http://localhost:3000/store/hello

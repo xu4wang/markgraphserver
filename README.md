@@ -15,3 +15,9 @@ API_KEY=secret node index.js
 
 Set up you verce account and deploy the repo as a free hobby project.
 
+Remember to config env:
+- PORT
+- API_KEY
+
+Note, in your client side, the http header paramter is API-KEY (NOT API_KEY).
+
